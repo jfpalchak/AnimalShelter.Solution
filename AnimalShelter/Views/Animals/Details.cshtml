@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model AnimalShelter.Models.Animal
+
+<h4>@Model.Name's Details</h4>
+<hr/>
+<h3>@Model.Type: @Model.Breed</h3>
+<h3>Date Admitted: @Model.DateOfAdmittance</h3>
+
+<p>@Html.ActionLink("Back to Animals", "Index")</p>

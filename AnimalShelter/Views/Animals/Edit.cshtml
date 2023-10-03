@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@model AnimalShelter.Models.Animal
+
+<h2>Edit</h2>
+
+<h4>Edit this animal: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @* We need to pass on the specific animal's Id to the controller: *@
+  @Html.HiddenFor(model => model.Id) 
+
+  @Html.LabelFor(model => model.Name)
+  @Html.EditorFor(model => model.Name)
+  @Html.LabelFor(model => model.Breed)
+  @Html.EditorFor(model => model.Breed)
+  @Html.LabelFor(model => model.Type)
+  @Html.EditorFor(model => model.Type)
+
+  <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to animals", "Index") </p>
+
+
+

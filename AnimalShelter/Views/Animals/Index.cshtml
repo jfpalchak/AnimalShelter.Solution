@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@using AnimalShelter.Models;
+
+<h1>Animals</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>Hopefully, no animal in the shelter at this moment.</h3>
+}
+
+<ul>
+  @foreach(Animal animal in Model)
+  {
+    <li>@Html.ActionLink($"{animal.Name}", "Details", new { id = animal.Id })</li> 
+  }
+</ul>
+
+<p>@Html.ActionLink("Add an Animal", "Create")</p>
