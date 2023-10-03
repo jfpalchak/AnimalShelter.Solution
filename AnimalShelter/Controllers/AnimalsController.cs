@@ -46,16 +46,32 @@ namespace AnimalShelter.Controllers
 
     // Edit/Update
     // GET animal to UPDATE
-    public ActionResult Edit(int id) // /animals/edit - GET
+    public ActionResult Edit(int id) // /animals/edit/{id} - GET
     {
       Animal foundAnimal = _db.Animals.FirstOrDefault(animal => animal.Id == id);
       return View(foundAnimal);
     }
 
     [HttpPost]
-    public ActionResult Edit(Animal animal) // /animals/edit - POST
+    public ActionResult Edit(Animal animal) // /animals/edit/{id} - POST
     {
       _db.Animals.Update(animal);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Delete(int id) // animals/delete/{id} - GET
+    {
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.Id == id);
+      return View(thisAnimal);
+    }
+
+    /animals/{id}
+    [HttpPost, ActionName("Delete")] // animals/delete/{id} - POST
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Animal thisAnimal = _db.Animals.FirstOrDefault(animal => animal.Id == id);
+      _db.Animals.Remove(thisAnimal);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
