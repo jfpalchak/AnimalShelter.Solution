@@ -20,9 +20,10 @@
   @Html.LabelFor(model => model.Type)
   @Html.EditorFor(model => model.Type)
 
+  @Html.HiddenFor(model => model.DateOfAdmittance)
+
   <input type="submit" value="Save" />
 }
 <p>@Html.ActionLink("Back to animals", "Index") </p>
-
 
 
