@@ -1,8 +1,8 @@
-# _{PROJECT NAME}_
+# _Animal Shelter_
 
-#### By _Joey Palchak_
+#### By _Joey Palchak, Jake Elsberry, Onur Kaymak_
 
-#### _{SHORT DESCRIPTION}_
+#### _A C# / ASP.NET Core MVC application, integrating Entity Framework Core._
 
 ## Technologies Used
 
@@ -15,7 +15,9 @@
 
 ## Description
 
-{DESCRIPTION}
+A web application for an animal shelter to track the animals in their facility based on animal type.
+
+A user has options to add, edit, and delete animal entries.
 
 ## Setup/Installation Requirements
 
@@ -26,12 +28,12 @@
 ```bash
 $ git clone #URL
 ```
-5. Open your terminal and navigate to this project's production directory called `{PROJECT NAME}`.
+5. Open your terminal and navigate to this project's production directory called `AnimalShelter`.
 6. Within the production directory of the project, create a file called `appsettings.json` and add the following code to it:
    ```json
     {
       "ConnectionStrings": {
-          "DefaultConnection": "Server=localhost;Port=3306;database={DATABASE-NAME};uid=[USERNAME];pwd=[PASSWORD];"
+          "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter;uid=[USERNAME];pwd=[PASSWORD];"
       }
     }
    ```
@@ -43,12 +45,6 @@ $ dotnet run
 ```
 > Optionally, you can run `dotnet build` to compile this console app without running it.
 
-9. To run tests on the project's models, navigate to the test directory, `{PROJECT NAME}.Tests`.
-10. In the command line, run the following command to execute tests:
-```bash
-$ dotnet test
-```
-
 ## Known Bugs
 
 * If any bugs are discovered, please contact the author.
@@ -57,7 +53,7 @@ $ dotnet test
 
 MIT License
 
-Copyright (c) _{DATE}_ _Joey Palchak_
+Copyright (c) _10/03/2023_ _Joey Palchak, Jake Elsberry, Onur Kaymak_
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
